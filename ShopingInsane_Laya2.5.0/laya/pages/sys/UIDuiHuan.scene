@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":10,
+    "selectedBox":5,
+    "selecteID":17,
     "searchKey":"View",
     "props":{"width":720,"top":0,"sceneColor":"#000000","right":0,"left":0,"height":1280,"bottom":0},
     "nodeParent":-1,
-    "maxID":24,
+    "maxID":26,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -32,33 +32,77 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box,DuiHuanBox,DuiHuanBox",
-            "props":{"width":720,"var":"DuiHuanBox","name":"DuiHuanBox","height":1280,"centerY":0,"centerX":0},
+            "props":{"var":"DuiHuanBox","top":0,"name":"DuiHuanBox","centerX":0,"bottom":0},
             "nodeParent":2,
             "label":"DuiHuanBox",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":4,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":341,"x":37,"skin":"main/kuang.png"},
+                    "searchKey":"Image,Board",
+                    "props":{"y":386,"skin":"UIDuiHuan/di.png","name":"Board","centerX":0},
                     "nodeParent":4,
-                    "label":"Image",
-                    "isDirectory":false,
+                    "label":"Board",
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":5,
                     "child":[
-                        ],
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,BackBtn1,BackBtn1",
+                            "props":{"y":17,"x":594,"width":72,"visible":false,"var":"BackBtn1","skin":"common/guangbi.png","pivotY":36,"pivotX":36,"name":"BackBtn1","height":72},
+                            "nodeParent":5,
+                            "label":"BackBtn1",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":17,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":68,"skin":"UIDuiHuan/qing.png","centerX":0},
+                            "nodeParent":5,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":25,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":148,"skin":"UIDuiHuan/xian.png","centerX":0},
+                            "nodeParent":5,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":24,
+                            "child":[
+                                ]
+                        }],
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,InputArea",
-                    "props":{"y":561,"x":75,"skin":"main/diban.png","name":"InputArea"},
+                    "props":{"y":597,"skin":"main/diban.png","name":"InputArea","centerX":0},
                     "nodeParent":4,
                     "label":"InputArea",
                     "isOpen":false,
@@ -84,9 +128,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,SureBtn,SureBtn",
-                    "props":{"y":823,"x":229.5,"var":"SureBtn","skin":"main/queding.png","name":"SureBtn"},
+                    "props":{"y":876,"width":262,"var":"SureBtn","skin":"main/queding.png","pivotY":53,"pivotX":131,"name":"SureBtn","height":106,"centerX":0},
                     "nodeParent":4,
                     "label":"SureBtn",
                     "isDirectory":false,
@@ -95,21 +140,8 @@
                     "compId":7,
                     "child":[
                         ]
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image,BackBtn",
-                    "props":{"y":341,"x":629,"visible":false,"skin":"sign/X.png","name":"BackBtn"},
-                    "nodeParent":4,
-                    "label":"BackBtn",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":17,
-                    "child":[
-                        ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -222,7 +254,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {

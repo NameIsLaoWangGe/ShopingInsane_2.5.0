@@ -1043,14 +1043,14 @@ export module lwg {
             }), 0);
         }
 
-           /**
-         * 上下抖动
-         * @param node 节点
-         * @param range 幅度
-         * @param time 花费时间
-         * @param delayed 延迟时间
-         * @param func 回调函数
-         */
+        /**
+      * 上下抖动
+      * @param node 节点
+      * @param range 幅度
+      * @param time 花费时间
+      * @param delayed 延迟时间
+      * @param func 回调函数
+      */
         export function upDwon_Shake(node, range, time, delayed, func): void {
             Laya.Tween.to(node, { y: node.y + range }, time, null, Laya.Handler.create(this, function () {
                 Laya.Tween.to(node, { y: node.y - range * 2 }, time, null, Laya.Handler.create(this, function () {
@@ -2861,6 +2861,12 @@ export module lwg {
             Laya.LocalStorage.setJSON(storageName, JSON.stringify(data));
             return dataArr;
         }
+    }
+
+    /**动画模块*/
+    export module NewAnimation2D {
+        // effectCurve
+
     }
 
 }

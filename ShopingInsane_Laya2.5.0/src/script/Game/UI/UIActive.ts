@@ -25,7 +25,6 @@ export default class UIActive extends UIBase
         this.btnEv("CloseBtn",()=>{
             this.hide();
         });
-        
     }
     onWrapItem(cell: Laya.Box, index: number)
     {

@@ -284,9 +284,6 @@ export module Task {
             _TaskList.refresh();
         }
     }
-    export class UIabc {
-
-    }
 }
 
 /**刮刮乐模块*/

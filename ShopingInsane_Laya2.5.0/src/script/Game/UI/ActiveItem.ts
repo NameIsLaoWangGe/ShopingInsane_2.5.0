@@ -5,8 +5,7 @@ import UIActive from "./UIActive";
 import BagListController from "./Bag/BagListController";
 import ADManager, { TaT } from "../../Admanager";
 
-export default class ActiveItem extends Laya.Script
-{
+export default class ActiveItem extends Laya.Script {
 
     Bg: Laya.Image;
     TaskPre: Laya.Label;
@@ -18,6 +17,8 @@ export default class ActiveItem extends Laya.Script
     Datas: ClothData[] = [];
     Icons: Laya.Image[] = [];
     Num: number = 0;
+    Lingqu: Laya.Label;
+
 
     MaxHeight = 85;
     MaxWeight = 85;
@@ -29,26 +30,24 @@ export default class ActiveItem extends Laya.Script
     IconParent: Laya.Box;
 
     PackName: Laya.Image;
-    onAwake()
-    {
+    onAwake() {
         let item = this.owner as Laya.Box;
         this.Bg = item.getChildByName("Bg") as Laya.Image;
         this.IconParent = item.getChildByName("IconParent") as Laya.Box;
         this.IconAll = this.IconParent.getChildByName("IconAll") as Laya.Image;
         this.ClothShow = item.getChildByName("ClothShow") as Laya.Box;
 
-        for (let i = 0; i < this.ClothShow.numChildren; i++)
-        {
+        for (let i = 0; i < this.ClothShow.numChildren; i++) {
             this.Icons.push(this.ClothShow.getChildAt(i).getChildAt(0) as Laya.Image);
         }
         this.ADBtn = item.getChildByName("ADBtn") as Laya.Image;
         this.TaskPre = this.ADBtn.getChildByName("TaskPre") as Laya.Label;
         this.ADBtn.on(Laya.Event.CLICK, this, this.adclick);
         this.PackName = item.getChildByName("PackName") as Laya.Image;
+        this.Lingqu = this.ADBtn.getChildByName("Lingqu") as Laya.Label;
     }
     //信息填充
-    fell(mes: ClothData[], index: number)
-    {
+    fell(mes: ClothData[], index: number) {
         // this.Datas.length=0;
         // this.Icons.length=0;
 
@@ -59,11 +58,9 @@ export default class ActiveItem extends Laya.Script
         this.IconAll.skin = iconpath;
         this.PackName.skin = PackNamepath;
         console.log(this.Datas);
-        this.Icons.forEach((v, i) =>
-        {
-            console.log("橱窗"+i+v);
-            if (i < this.Datas.length)
-            {
+        this.Icons.forEach((v, i) => {
+            console.log("橱窗" + i + v);
+            if (i < this.Datas.length) {
                 v.visible = true;
                 v.skin = this.Datas[i].GetPath1();
 
@@ -74,8 +71,7 @@ export default class ActiveItem extends Laya.Script
                 {
                     pr = this.MaxWeight / imagewidth
                 }
-                else
-                {
+                else {
                     pr = this.MaxHeight / imageHeight;
                 }
                 v.scaleX = pr;
@@ -83,20 +79,18 @@ export default class ActiveItem extends Laya.Script
                 v.centerX = 0;
                 v.centerY = 0;
             }
-            else
-            {
+            else {
                 v.visible = false;
             }
         });
         //截取套装获取信息
-        this.Datas.forEach((v, i) =>
-        {
+        this.Datas.forEach((v, i) => {
             let nv = GameDataController.ClothDataRefresh[this.Datas[i].ID]//0 解锁 1未解锁
             this.str[this.Datas[i].ID] = nv;
 
             console.log(GameDataController.ClothDataRefresh[this.Datas[i].ID]);
         });
-        
+
         console.log(this.str);
         GameDataController.ClothdatapackSet(this.Datas[0].GetType2, this.str)//更新套装信息
         console.log(this.Datas[0].GetType2, this.str);
@@ -104,67 +98,55 @@ export default class ActiveItem extends Laya.Script
         console.log("未解锁数量", this.Num);
         this.Now = (this.Datas.length - this.Num) + "";
         this.Need = (this.Datas.length) + "";
-        this.TaskPre.text = this.Now + " / " + this.Need
-        this.ADBtn.visible = this.Num > 0;
+        this.TaskPre.text = '(' + this.Now + " / " + this.Need + ')';
+        // this.ADBtn.visible = this.Num > 0;
+        if (this.Num <= 0) {
+            this.Lingqu.text = '已领取';
+        }
 
-        if(this.ADBtn.visible)
-        {
-            if(this.Datas[0].GetType2=="2_1")
-            {
-                ADManager.TAPoint(TaT.BtnShow,"ADtz1_click");
-                
-            }else if(this.Datas[0].GetType2=="2_2")
-            {
-                ADManager.TAPoint(TaT.BtnShow,"ADtz2_click")
+        if (this.ADBtn.visible) {
+            if (this.Datas[0].GetType2 == "2_1") {
+                ADManager.TAPoint(TaT.BtnShow, "ADtz1_click");
+
+            } else if (this.Datas[0].GetType2 == "2_2") {
+                ADManager.TAPoint(TaT.BtnShow, "ADtz2_click")
             }
-            else if(this.Datas[0].GetType2=="2_3")
-            {
-                ADManager.TAPoint(TaT.BtnShow,"ADhunsha_click")
+            else if (this.Datas[0].GetType2 == "2_3") {
+                ADManager.TAPoint(TaT.BtnShow, "ADhunsha_click")
             }
         }
-        
-        
 
-        for (let index = 0; index < this.ClothShow.numChildren; index++)
-        {
-            if (index >= this.Datas.length)
-            {
+        for (let index = 0; index < this.ClothShow.numChildren; index++) {
+            if (index >= this.Datas.length) {
                 (this.ClothShow.getChildAt(index) as Laya.Image).visible = false;
             }
         }
     }
     //广告按钮点击
-    adclick()
-    {
-        if(this.Datas[0].GetType2=="2_1")
-        {
-            ADManager.TAPoint(TaT.BtnClick,"ADtz1_click");
+    adclick() {
+        if (this.Datas[0].GetType2 == "2_1") {
+            ADManager.TAPoint(TaT.BtnClick, "ADtz1_click");
         }
-        else if(this.Datas[0].GetType2=="2_2")
-        {
-            ADManager.TAPoint(TaT.BtnClick,"ADtz2_click");
+        else if (this.Datas[0].GetType2 == "2_2") {
+            ADManager.TAPoint(TaT.BtnClick, "ADtz2_click");
         }
-        else if(this.Datas[0].GetType2=="2_3")
-        {
-            ADManager.TAPoint(TaT.BtnClick,"ADhunsha_click");
+        else if (this.Datas[0].GetType2 == "2_3") {
+            ADManager.TAPoint(TaT.BtnClick, "ADhunsha_click");
         }
-        
 
-        ADManager.ShowReward(()=>{
+
+        ADManager.ShowReward(() => {
             this.GetAward();
-        },()=>{
-            UIMgr.show("UITip",()=>{
+        }, () => {
+            UIMgr.show("UITip", () => {
                 this.GetAward();
             })
         })
 
     }
-    GetAward()
-    {
-        for(let k in this.str)
-        {
-            if(this.str[k]==1)
-            {
+    GetAward() {
+        for (let k in this.str) {
+            if (this.str[k] == 1) {
                 console.log("GameDataController.ClothDataRefresh[k]", k, GameDataController.ClothDataRefresh[k]);
                 let dataall = GameDataController.ClothDataRefresh;
                 dataall[k] = 0;//解锁
@@ -173,7 +155,7 @@ export default class ActiveItem extends Laya.Script
                 Laya.LocalStorage.setJSON(this.Datas[0].GetType2, this.str);
                 (UIMgr.get("UIActive") as UIActive).Refresh();
                 BagListController.Instance.showList();
-                UIMgr.tip("恭喜获得新衣服");  
+                UIMgr.tip("恭喜获得新衣服");
                 return;
             }
         }

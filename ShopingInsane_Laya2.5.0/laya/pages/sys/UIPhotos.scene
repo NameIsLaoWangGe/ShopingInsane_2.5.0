@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":667,
-    "selecteID":689,
+    "selectedBox":631,
+    "selecteID":664,
     "searchKey":"View",
     "props":{"width":720,"top":0,"sceneColor":"#000000","right":0,"left":0,"height":1280,"bottom":0},
     "nodeParent":-1,
-    "maxID":698,
+    "maxID":702,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -31,7 +31,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,TweenskewY",
-                    "props":{"var":"TweenskewY","skin":"Photos/di.png","skewY":0,"left":0,"centerY":28},
+                    "props":{"var":"TweenskewY","skin":"Photos/di.png","skewY":0,"left":90,"centerY":16},
                     "nodeParent":631,
                     "label":"TweenskewY",
                     "isOpen":true,
@@ -44,7 +44,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,PhotosBg",
-                            "props":{"y":172,"x":107,"skin":"Photos/tupiandi.png","name":"PhotosBg"},
+                            "props":{"y":177,"x":41,"skin":"Photos/tupiandi.png","name":"PhotosBg"},
                             "nodeParent":664,
                             "label":"PhotosBg",
                             "isOpen":true,
@@ -53,6 +53,20 @@
                             "hasChild":true,
                             "compId":667,
                             "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"x":-231,"width":894,"skin":"Photos/shengzi.png","height":59,"centerY":-528},
+                                    "nodeParent":667,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":701,
+                                    "child":[
+                                        ]
+                                },
                                 {
                                     "x":60,
                                     "type":"Image",
@@ -385,7 +399,7 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,ChangeLeft,ChangeLeft",
-                                    "props":{"var":"ChangeLeft","skin":"Photos/zuo.png","name":"ChangeLeft","left":-85,"centerY":-9},
+                                    "props":{"var":"ChangeLeft","skin":"Photos/you.png","name":"ChangeLeft","left":-70,"centerY":-9},
                                     "nodeParent":667,
                                     "label":"ChangeLeft",
                                     "isDirectory":false,
@@ -399,7 +413,7 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,ChangeRight,ChangeRight",
-                                    "props":{"var":"ChangeRight","skin":"Photos/you.png","right":-87,"name":"ChangeRight","centerY":-9},
+                                    "props":{"var":"ChangeRight","skin":"Photos/zuo.png","scaleX":1,"right":-80,"name":"ChangeRight","centerY":-9},
                                     "nodeParent":667,
                                     "label":"ChangeRight",
                                     "isDirectory":false,
@@ -413,7 +427,7 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,Title",
-                                    "props":{"y":-127,"skin":"Photos/biaoti.png","name":"Title","centerX":-4},
+                                    "props":{"y":-119,"skin":"Photos/biaoti.png","name":"Title","centerX":-782},
                                     "nodeParent":667,
                                     "label":"Title",
                                     "isDirectory":false,
@@ -429,9 +443,10 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,BackHome",
-                            "props":{"y":65,"x":53,"width":92,"var":"BackHome","skin":"main/anniu_xia.png","rotation":90,"height":92,"anchorY":0.5,"anchorX":0.5},
+                            "props":{"y":-92,"x":-12,"width":92,"var":"BackHome","skin":"Photos/guangbi.png","rotation":90,"height":92,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":664,
                             "label":"BackHome",
+                            "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -439,6 +454,20 @@
                             "child":[
                                 ]
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":890,"skin":"Photos/效果.png","centerY":16},
+                    "nodeParent":631,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":699,
+                    "child":[
+                        ]
                 }]
         }],
     "animations":[

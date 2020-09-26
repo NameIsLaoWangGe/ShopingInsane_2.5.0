@@ -199,6 +199,7 @@ export default class UIReady extends UIBase {
         //xxxxxxxxxxxxxxxxxxxxxxx
         this.ShowView = this.vars("ShowView");
         this.BtnBar = this.vars("BtnBar");
+        console.log(this.BtnBar.x, this.BtnBar.y)
         this.ClothOpenBtn = this.vars("ClothOpenBtn");
 
         this.FemaleRoot = this.vars("FemaleRoot");

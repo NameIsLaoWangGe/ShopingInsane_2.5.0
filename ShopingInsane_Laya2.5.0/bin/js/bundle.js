@@ -5241,6 +5241,7 @@
             this.TaskPre = this.ADBtn.getChildByName("TaskPre");
             this.ADBtn.on(Laya.Event.CLICK, this, this.adclick);
             this.PackName = item.getChildByName("PackName");
+            this.Lingqu = this.ADBtn.getChildByName("Lingqu");
         }
         fell(mes, index) {
             let iconpath = "Active/taozhuang" + (index + 1) + ".png";
@@ -5284,8 +5285,10 @@
             console.log("未解锁数量", this.Num);
             this.Now = (this.Datas.length - this.Num) + "";
             this.Need = (this.Datas.length) + "";
-            this.TaskPre.text = this.Now + " / " + this.Need;
-            this.ADBtn.visible = this.Num > 0;
+            this.TaskPre.text = '(' + this.Now + " / " + this.Need + ')';
+            if (this.Num <= 0) {
+                this.Lingqu.text = '已领取';
+            }
             if (this.ADBtn.visible) {
                 if (this.Datas[0].GetType2 == "2_1") {
                     ADManager.TAPoint(TaT.BtnShow, "ADtz1_click");
@@ -7611,9 +7614,6 @@
             }
         }
         Task.refreshTask = refreshTask;
-        class UIabc {
-        }
-        Task.UIabc = UIabc;
     })(Task || (Task = {}));
     var Scratchers;
     (function (Scratchers) {
@@ -10022,6 +10022,7 @@
             });
             this.ShowView = this.vars("ShowView");
             this.BtnBar = this.vars("BtnBar");
+            console.log(this.BtnBar.x, this.BtnBar.y);
             this.ClothOpenBtn = this.vars("ClothOpenBtn");
             this.FemaleRoot = this.vars("FemaleRoot");
             this.BagAll = this.vars("BagALL");
@@ -10905,7 +10906,6 @@
         }
         onShow() {
             ADManager.TAPoint(TaT.PageEnter, "xiangcepage");
-            this.TweenskewY.skewY = -90;
             this._PhotosChange.InitMes();
             this.TweenOn();
         }
@@ -10916,13 +10916,9 @@
             this._PhotosChange.ChangeLastPhoto();
         }
         TweenOn() {
-            let a = Laya.Tween.to(this.TweenskewY, { skewY: 0 }, 500, Laya.Ease.linearNone, Laya.Handler.create(this, () => {
-            }), 0, true, true);
         }
         TweenOff() {
-            let a = Laya.Tween.to(this.TweenskewY, { skewY: -90 }, 500, Laya.Ease.linearNone, Laya.Handler.create(this, () => {
-                this.hide();
-            }), 0, true, true);
+            this.hide();
         }
         onHide() {
             ADManager.TAPoint(TaT.PageLeave, "xiangcepage");
@@ -12137,7 +12133,12 @@
             this.Title = this.HeCheng.getChildByName("Title");
             this.CombineBtn.on(Laya.Event.CLICK, this, this.DanShengShow);
             this.HCCloseBtn = this.HeCheng.getChildByName("HCCloseBtn");
+            this.HCCloseBtn1 = this.First.getChildByName("HCCloseBtn1");
             this.HCCloseBtn.on(Laya.Event.CLICK, this, () => {
+                RecordManager.stopAutoRecord();
+                this.hide();
+            });
+            this.HCCloseBtn1.on(Laya.Event.CLICK, this, () => {
                 RecordManager.stopAutoRecord();
                 this.hide();
             });
@@ -12174,8 +12175,6 @@
             this.CheckBtn.on(Laya.Event.CLICK, this, () => {
                 this.isWatchAD = !this.isWatchAD;
                 this.CheckBtn.getChildAt(0).visible = !this.CheckBtn.getChildAt(0).visible;
-                this.GetAwardBtn.getChildAt(0).visible = this.isWatchAD;
-                this.GetAwardBtn.getChildAt(1).visible = !this.isWatchAD;
             });
             this.GetAwardBtn.on(Laya.Event.CLICK, this, this.GetAwardBtnClick);
         }
@@ -12193,8 +12192,6 @@
             this.DanSheng.visible = false;
             this.isWatchAD = true;
             this.CheckBtn.getChildAt(0).visible = true;
-            this.GetAwardBtn.getChildAt(0).visible = this.isWatchAD;
-            this.GetAwardBtn.getChildAt(1).visible = !this.isWatchAD;
             this.count = 0;
             this.QiZhi.on(Laya.Event.CLICK, this, this.QiZhiClick);
             this.Yanzhi.on(Laya.Event.CLICK, this, this.YanzhiClick);
@@ -12389,8 +12386,8 @@
             this.InputText = this.vars("InputText");
             this.SureBtn = this.DuiHuanBox.getChildByName("SureBtn");
             this.btnEv("SureBtn", this.SureBtnClick);
-            this.BackBtn = this.DuiHuanBox.getChildByName("BackBtn");
-            this.BackBtn.on(Laya.Event.CLICK, this, () => {
+            this.BackBtn1 = this.vars('BackBtn1');
+            this.BackBtn1.on(Laya.Event.CLICK, this, () => {
                 this.hide();
             });
             this.GetBox = this.vars("GetBox");
@@ -12408,7 +12405,7 @@
         onShow() {
             RecordManager.startAutoRecord();
             Laya.timer.once(3000, this, () => {
-                this.BackBtn.visible = true;
+                this.BackBtn1.visible = true;
             });
             this.GetBox.visible = false;
             this.CloseBtn.visible = false;
@@ -12421,7 +12418,7 @@
             this.DuiHuanBox.visible = true;
             this.GetBox.visible = false;
             this.CloseBtn.visible = false;
-            this.BackBtn.visible = false;
+            this.BackBtn1.visible = false;
         }
         SureBtnClick() {
             for (let k in this.str) {
