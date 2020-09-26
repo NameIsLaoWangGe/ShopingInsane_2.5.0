@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":518,
+    "selectedBox":543,
+    "selecteID":548,
     "searchKey":"View",
     "props":{"zOrder":-10,"width":720,"visible":true,"top":0,"sceneColor":"#000000","right":0,"left":0,"height":1280,"bottom":0,"bgColor":"#000000"},
     "nodeParent":-1,
-    "maxID":1156,
+    "maxID":1161,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -46,7 +46,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,ActiveBtn,ActiveBtn",
-                    "props":{"var":"ActiveBtn","top":467,"skin":"main/anniu_chuchaung.png","right":612,"name":"ActiveBtn"},
+                    "props":{"var":"ActiveBtn","top":686,"skin":"main/anniu_chuchaung.png","right":592,"name":"ActiveBtn"},
                     "nodeParent":518,
                     "label":"ActiveBtn",
                     "isDirectory":false,
@@ -60,7 +60,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,Share,Share",
-                    "props":{"y":541,"x":614,"var":"Share","skin":"main/anniu_paizhao.png","name":"Share"},
+                    "props":{"y":536,"x":609,"var":"Share","skin":"main/anniu_paizhao.png","name":"Share"},
                     "nodeParent":518,
                     "label":"Share",
                     "isDirectory":false,
@@ -74,7 +74,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,ClothReceive,ClothReceive",
-                    "props":{"y":672,"x":614,"var":"ClothReceive","skin":"main/anniu_zhongzhi.png","name":"ClothReceive"},
+                    "props":{"y":930,"x":-627,"var":"ClothReceive","skin":"main/anniu_zhongzhi.png","name":"ClothReceive"},
                     "nodeParent":518,
                     "label":"ClothReceive",
                     "isDirectory":false,
@@ -89,7 +89,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,PhotoBtn,PhotoBtn",
-                    "props":{"y":590.5,"x":16,"var":"PhotoBtn","skin":"main/anniu_xiance.png","name":"PhotoBtn"},
+                    "props":{"y":560,"x":25,"var":"PhotoBtn","skin":"main/anniu_xiance.png","name":"PhotoBtn"},
                     "nodeParent":518,
                     "label":"PhotoBtn",
                     "isDirectory":false,
@@ -104,7 +104,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,ClockBtn,ClockBtn",
-                    "props":{"y":124.5,"x":659,"width":89,"visible":false,"var":"ClockBtn","skin":"main/NZ.png","scaleY":1,"scaleX":1,"name":"ClockBtn","height":81,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"y":591,"x":-497.5,"width":89,"visible":false,"var":"ClockBtn","skin":"main/NZ.png","scaleY":1,"scaleX":1,"name":"ClockBtn","height":81,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":518,
                     "label":"ClockBtn",
                     "isDirectory":false,
@@ -143,7 +143,7 @@
                     "compId":956,
                     "child":[
                         ],
-                    "$HIDDEN":true
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -152,45 +152,19 @@
                     "props":{"y":57.5,"x":57,"var":"MusicBtn","skin":"main/shezhi_di.png","name":"MusicBtn","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":518,
                     "label":"MusicBtn",
-                    "isOpen":false,
-                    "isDirectory":true,
+                    "isOpen":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
+                    "hasChild":false,
                     "compId":957,
                     "child":[
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"skin":"main/shezhi_yinfu.png","centerY":0,"centerX":-4,"anchorY":0.5,"anchorX":0.5},
-                            "nodeParent":957,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":958,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,No",
-                            "props":{"visible":false,"skin":"main/shezhi_x.png","name":"No","centerY":0,"centerX":0},
-                            "nodeParent":957,
-                            "label":"No",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":959,
-                            "child":[
-                                ]
-                        }]
+                        ]
                 },
                 {
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,Pick",
-                    "props":{"y":205.5,"x":592,"visible":true,"var":"Pick","skin":"PK/tubiao_pk.png"},
+                    "props":{"y":700.5,"x":-581,"visible":true,"var":"Pick","skin":"PK/tubiao_pk.png"},
                     "nodeParent":518,
                     "label":"Pick",
                     "isDirectory":false,
@@ -205,7 +179,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,DuihuanBtn,DuihuanBtn",
-                    "props":{"y":417.5,"x":615.5,"visible":true,"var":"DuihuanBtn","skin":"main/anniu.png","name":"DuihuanBtn"},
+                    "props":{"y":310,"x":22,"visible":true,"var":"DuihuanBtn","skin":"main/anniu.png","name":"DuihuanBtn"},
                     "nodeParent":518,
                     "label":"DuihuanBtn",
                     "isOpen":true,
@@ -236,7 +210,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,Combine,Combine",
-                    "props":{"y":349.5,"x":14,"var":"Combine","skin":"main/huagongzhu.png","name":"Combine"},
+                    "props":{"y":436,"x":22,"var":"Combine","skin":"main/huagongzhu.png","name":"Combine"},
                     "nodeParent":518,
                     "label":"Combine",
                     "isDirectory":false,
@@ -250,7 +224,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,Draw,Draw",
-                    "props":{"y":300,"x":611.5,"var":"Draw","skin":"main/tubiao.png","name":"Draw"},
+                    "props":{"y":391,"x":-550,"var":"Draw","skin":"main/tubiao.png","name":"Draw"},
                     "nodeParent":518,
                     "label":"Draw",
                     "isOpen":false,
@@ -271,13 +245,14 @@
                             "compId":1150,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,Shop,Shop",
-                    "props":{"y":237,"x":18,"var":"Shop","skin":"main/xiaomaibu.png","name":"Shop"},
+                    "props":{"y":237,"x":-563,"var":"Shop","skin":"main/xiaomaibu.png","name":"Shop"},
                     "nodeParent":518,
                     "label":"Shop",
                     "isDirectory":false,
@@ -754,13 +729,14 @@
             "props":{"zOrder":10,"width":720,"var":"BagALL","height":485,"centerX":0,"bottom":-37},
             "nodeParent":2,
             "label":"BagALL",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":543,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"zOrder":9,"skin":"main/di.png","centerX":0,"bottom":0},
@@ -774,31 +750,48 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,ShowView,ShowView",
                     "props":{"zOrder":10,"y":-1,"width":720,"var":"ShowView","name":"ShowView","height":486,"centerX":0},
                     "nodeParent":543,
                     "label":"ShowView",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":569,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,ClothOpenBtn,ClothOpenBtn",
-                            "props":{"zOrder":10,"var":"ClothOpenBtn","top":-123,"skin":"main/anniu_shang.png","rotation":180,"name":"ClothOpenBtn","left":16,"anchorY":0.5,"anchorX":0.5},
+                            "props":{"zOrder":10,"var":"ClothOpenBtn","top":-73,"skin":"main/sahngxia.png","rotation":180,"name":"ClothOpenBtn","left":641,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":569,
                             "label":"ClothOpenBtn",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":693,
                             "child":[
-                                ]
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"y":21,"x":22,"skin":"main/anniu_shang.png"},
+                                    "nodeParent":693,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":1158,
+                                    "child":[
+                                        ]
+                                }]
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,hair",
                             "props":{"zOrder":10,"top":15,"right":0,"name":"hair","left":0,"bottom":0},
@@ -981,6 +974,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,dress",
                             "props":{"zOrder":10,"top":16,"right":0,"name":"dress","left":0,"bottom":0},
@@ -1163,6 +1157,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,ornament",
                             "props":{"zOrder":10,"top":15,"right":0,"name":"ornament","left":0,"bottom":0},
@@ -1343,6 +1338,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,shose",
                             "props":{"zOrder":10,"top":15,"right":0,"name":"shose","left":0,"bottom":0},
@@ -1523,6 +1519,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,socks",
                             "props":{"zOrder":10,"top":15,"right":0,"name":"socks","left":0,"bottom":0},
@@ -1703,6 +1700,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,shirt",
                             "props":{"zOrder":10,"top":15,"right":0,"name":"shirt","left":0,"bottom":0},
@@ -1883,6 +1881,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,trousers",
                             "props":{"zOrder":10,"width":720,"top":15,"right":0,"name":"trousers","left":0,"height":222,"bottom":0},
@@ -2065,21 +2064,23 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,BtnBar,BtnBar",
                     "props":{"zOrder":10,"width":729,"var":"BtnBar","top":23,"name":"BtnBar","height":65,"centerX":0},
                     "nodeParent":543,
                     "label":"BtnBar",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":548,
                     "child":[
                         {
+                            "x":45,
                             "type":"List",
                             "searchKey":"List,ListBtn",
-                            "props":{"width":713,"spaceX":27,"repeatY":0,"name":"ListBtn","height":70,"centerY":-5,"centerX":0},
+                            "props":{"width":656,"spaceX":0,"repeatY":0,"name":"ListBtn","height":155,"centerY":-15,"centerX":-59},
                             "nodeParent":548,
                             "label":"ListBtn",
                             "isOpen":true,
@@ -2089,9 +2090,10 @@
                             "compId":681,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Box",
                                     "searchKey":"Box",
-                                    "props":{"x":22,"width":74,"scaleY":1,"scaleX":1,"renderType":"render","height":70,"centerY":-11},
+                                    "props":{"x":39,"width":137,"scaleY":1,"scaleX":1,"renderType":"render","height":93,"centerY":-9},
                                     "nodeParent":681,
                                     "label":"Box",
                                     "isOpen":true,
@@ -2101,6 +2103,7 @@
                                     "compId":692,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,Btn",
                                             "props":{"zOrder":10,"skin":"Btnbar/dress.png","name":"Btn","centerY":0,"centerX":0},
@@ -2116,9 +2119,10 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,icon",
-                                            "props":{"zOrder":10,"skin":"Btnbar/dress1.png","name":"icon","centerY":0,"centerX":0},
+                                            "props":{"zOrder":10,"skin":"Btnbar/dress1.png","name":"icon","centerY":0,"centerX":0,"alpha":0.5},
                                             "nodeParent":692,
                                             "label":"icon",
                                             "isDirectory":false,
@@ -2130,6 +2134,7 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Script",
                                             "switchAble":true,
                                             "source":"src/script/Game/UI/Bag/ClothBtn.ts",
@@ -2148,6 +2153,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Hair",
                             "props":{"y":3,"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Hair","height":60,"centerX":-157},
@@ -2175,6 +2181,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Up",
                             "props":{"y":3,"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Up","height":60,"centerX":0},
@@ -2202,6 +2209,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Down",
                             "props":{"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Down","height":60,"centerY":32,"centerX":-240},
@@ -2229,6 +2237,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Shoes",
                             "props":{"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Shoes","height":60,"centerY":32,"centerX":-80},
@@ -2256,6 +2265,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Dress",
                             "props":{"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Dress","height":60,"centerY":32,"centerX":80},
@@ -2283,6 +2293,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Acc",
                             "props":{"y":0,"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Acc","height":60,"centerX":157},
@@ -2310,6 +2321,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Sock",
                             "props":{"width":144,"visible":false,"styleSkin":"UI/31.png","name":"Sock","height":60,"centerY":32,"centerX":240},
@@ -2338,6 +2350,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/Game/UI/Bag/BagListController.ts",
@@ -2354,6 +2367,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,P201",
                     "props":{"zOrder":10,"width":133,"name":"P201","height":133,"centerY":-43,"centerX":282,"anchorY":0.5,"anchorX":0.5},
@@ -2499,6 +2513,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,P201",
                     "props":{"zOrder":10,"width":133,"name":"P201","height":133,"centerY":109,"centerX":282,"anchorY":0.5,"anchorX":0.5},
@@ -2642,6 +2657,20 @@
                                 ]
                         }],
                     "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":-830,"x":725,"texture":"main/主界面2.png"},
+                    "nodeParent":543,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1156,
+                    "child":[
+                        ]
                 }],
             "$HIDDEN":false
         }],
