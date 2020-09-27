@@ -8178,6 +8178,9 @@
                 class _ApertureImage extends Laya.Image {
                     constructor(parent, centerPoint, width, height, rotation, urlArr, colorRGBA, zOder) {
                         super();
+                        if (!parent.parent) {
+                            return;
+                        }
                         parent.addChild(this);
                         centerPoint ? this.pos(centerPoint.x, centerPoint.y) : this.pos(0, 0);
                         this.width = width ? width : 100;
@@ -8252,8 +8255,7 @@
                         sectionHeight = Tools.randomOneHalf() == 0 ? sectionHeight : -sectionHeight;
                         this.x = centerPoint ? centerPoint.x + sectionWidth : sectionWidth;
                         this.y = centerPoint ? centerPoint.y + sectionHeight : sectionHeight;
-                        width = width ? width : [25, 50];
-                        this.width = Tools.randomOneNumber(width[0], width[1]);
+                        this.width = width ? Tools.randomOneNumber(width[0], width[1]) : Tools.randomOneNumber(20, 50);
                         this.height = height ? Tools.randomOneNumber(height[0], height[1]) : this.width;
                         this.pivotX = this.width / 2;
                         this.pivotY = this.height / 2;
@@ -8270,6 +8272,50 @@
                     }
                 }
                 _Particle._ParticleImgBase = _ParticleImgBase;
+                function _snow(parent, centerPoint, sectionWH, width, height, rotation, urlArr, colorRGBA, zOder, distance, rotationSpeed, speed, windX) {
+                    let Img = new _ParticleImgBase(parent, centerPoint, sectionWH, width, height, rotation, urlArr, colorRGBA, zOder);
+                    let _rotationSpeed = rotationSpeed ? Tools.randomOneNumber(rotationSpeed[0], rotationSpeed[1]) : Tools.randomOneNumber(0, 1);
+                    _rotationSpeed = Tools.randomOneHalf() == 0 ? _rotationSpeed : -_rotationSpeed;
+                    let speed0 = speed ? Tools.randomOneNumber(speed[0], speed[1]) : Tools.randomOneNumber(1, 2.5);
+                    let _windX = windX ? Tools.randomOneNumber(windX[0], windX[1]) : 0;
+                    let moveCaller = {
+                        alpha: true,
+                        move: false,
+                        vinish: false,
+                    };
+                    Img['moveCaller'] = moveCaller;
+                    let distance0 = 0;
+                    let distance1 = distance ? Tools.randomOneNumber(distance[0], distance[1]) : Tools.randomOneNumber(100, 300);
+                    TimerAdmin._frameLoop(1, moveCaller, () => {
+                        Img.x += _windX;
+                        Img.rotation += _rotationSpeed;
+                        if (Img.alpha < 1 && moveCaller.alpha) {
+                            Img.alpha += 0.05;
+                            distance0 = Img.y++;
+                            if (Img.alpha >= 1) {
+                                moveCaller.alpha = false;
+                                moveCaller.move = true;
+                            }
+                        }
+                        if (distance0 < distance1 && moveCaller.move) {
+                            distance0 = Img.y += speed0;
+                            if (distance0 >= distance1) {
+                                moveCaller.move = false;
+                                moveCaller.vinish = true;
+                            }
+                        }
+                        if (moveCaller.vinish) {
+                            Img.alpha -= 0.03;
+                            Img.y += speed0;
+                            if (Img.alpha <= 0 || speed0 <= 0) {
+                                Img.removeSelf();
+                                Laya.timer.clearAll(moveCaller);
+                            }
+                        }
+                    });
+                    return Img;
+                }
+                _Particle._snow = _snow;
                 function _fallingVertical(parent, centerPoint, sectionWH, width, height, rotation, urlArr, colorRGBA, zOder, distance, speed, accelerated) {
                     let Img = new _ParticleImgBase(parent, centerPoint, sectionWH, width, height, rotation, urlArr, colorRGBA, zOder);
                     let speed0 = speed ? Tools.randomOneNumber(speed[0], speed[1]) : Tools.randomOneNumber(4, 8);
@@ -8515,6 +8561,9 @@
                 class _GlitterImage extends Laya.Image {
                     constructor(parent, centerPos, radiusXY, urlArr, colorRGBA, width, height) {
                         super();
+                        if (!parent.parent) {
+                            return;
+                        }
                         parent.addChild(this);
                         this.skin = urlArr ? Tools.arrayRandomGetOne(urlArr) : _SkinUrl.星星1;
                         this.width = width ? Tools.randomOneNumber(width[0], width[1]) : 80;
@@ -8583,12 +8632,10 @@
                 function _simpleInfinite(parent, x, y, width, height, zOder, url, speed) {
                     let Img = new Laya.Image();
                     parent.addChild(Img);
-                    Img.pos(x, y);
                     Img.width = width;
                     Img.height = height;
-                    Img.pivotX = width / 2;
-                    Img.pivotY = height / 2;
-                    Img.skin = url ? url : _SkinUrl[24];
+                    Img.pos(x, y);
+                    Img.skin = url ? url : _SkinUrl.光圈1;
                     Img.alpha = 0;
                     Img.zOrder = zOder ? zOder : 0;
                     let add = true;
@@ -12757,8 +12804,8 @@
             if (this.nowColorID != -1) {
                 node = this.Board.getChildByName("imgColor" + (this.nowColorID + 1));
             }
-            this.imgGou.x = node.x + 30;
-            this.imgGou.y = node.y + 35;
+            this.imgGou.x = node.x + 23;
+            this.imgGou.y = node.y + 20;
         }
         _onMouseDown(event) {
             this.isTouchOnDraw = true;

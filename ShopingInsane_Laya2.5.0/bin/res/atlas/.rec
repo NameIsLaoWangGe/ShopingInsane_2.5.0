@@ -55,6 +55,7 @@ P FA2FCADB black.png
 P CA2849D4 btn2.png
 P 5494ADAD buxuan.png
 P 36FD6A12 di.png
+P C2B6FB91 fanhui.png
 P 25DB2F3D finger.png
 P 38AB8F3F fontClip_num.png
 P 8651374E gg.png
@@ -85,9 +86,10 @@ P 94CC9583 yuan2.png
 P 638306FF zhijielingqu.png
 D comp
 D DX
-P 39552FA5 img_main_xuanzeyanse.png
+P 823DFA27 img_main_xuanzeyanse.png
 P 51D97561 shipin.png
 P 621E161B shuaxing.png
+R E44A620E 画.png
 D Egg2
 P 0FA1545F anniu_wushui.png
 P CCB1A64C biaoti.png
@@ -132,7 +134,7 @@ P 1F0A5595 meilizhi.png
 P C1064EB7 NZ.png
 P 349F1F46 queding.png
 P B076CE9E sahngxia.png
-P 96AFE1C9 shezhi_di.png
+P F1C666C0 shezhi_di.png
 P B12CD7B5 shezhi_x.png
 P 4077F0E7 shezhi_yinfu.png
 P C39DDB72 shiping.png
@@ -141,6 +143,7 @@ P 256E2495 tubiao.png
 P CF323756 xiaomaibu.png
 R 59FB006A xuancuangtu.png
 P 5E8235E1 yincan.png
+P 076F86D9 yuan.png
 P 48BD7E85 zaici.png
 P 6FDD3905 zhezhao.png
 P 0A994FD0 zi.png
@@ -304,11 +307,13 @@ P 755D1380 4.png
 P 85DC0CEC 5.png
 P AD2ACB0E 6.png
 P D9D0D4A0 7.png
+R BA5C0287 ben.png
 R FBE40EC7 biaoti.png
 R A5E41F7C ren.png
-R 57E3DAC9 tishi.png
+R 7EB7BB95 tishi.png
 P 256E2495 tubiao.png
-P F7A1E1BF xiangpi.png
+P A489CD67 xiangpi.png
+R 39306C17 xuanse-di.png
 D Frame/Effects
 P 479E26FC aixin1.png
 P D31680DB aixin2.png

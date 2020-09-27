@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":856,
+    "selectedBox":72,
+    "selecteID":689,
     "searchKey":"View",
     "props":{"y":0,"x":0,"width":720,"top":0,"sceneColor":"#ffffff","right":0,"left":0,"height":1280,"bottom":0},
     "nodeParent":-1,
-    "maxID":857,
+    "maxID":861,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"top":0,"skin":"main/BG.png","right":0,"left":0,"bottom":0},
+            "props":{"top":0,"skin":"main/bj.png","right":0,"left":0,"bottom":0},
             "nodeParent":2,
             "label":"Image",
             "isDirectory":false,
@@ -36,13 +36,14 @@
             "props":{"var":"Gaming","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":2,
             "label":"Gaming",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":72,
             "child":[
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,UIBox",
                     "props":{"var":"UIBox","top":0,"right":0,"left":0,"bottom":0},
@@ -55,6 +56,7 @@
                     "compId":689,
                     "child":[
                         {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,SliderBox",
                             "props":{"var":"SliderBox","top":0,"right":0,"left":0,"bottom":0},
@@ -69,9 +71,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,DrawingBG",
-                            "props":{"visible":true,"var":"DrawingBG","top":0,"skin":"main/BG.png","right":0,"left":1,"bottom":0},
+                            "props":{"visible":true,"var":"DrawingBG","top":0,"skin":"main/bj.png","right":0,"left":1,"bottom":0},
                             "nodeParent":689,
                             "label":"DrawingBG",
                             "isDirectory":false,
@@ -83,23 +86,40 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,tishiaw",
+                            "props":{"y":245,"x":1,"var":"tishiaw","skin":"DX/huafushi/tishi.png"},
+                            "nodeParent":689,
+                            "label":"tishiaw",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":796,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
                             "type":"Box",
                             "searchKey":"Box,Board",
-                            "props":{"y":400,"width":720,"var":"Board","height":880,"centerX":-1,"alpha":1},
+                            "props":{"width":720,"var":"Board","height":880,"centerX":-1,"bottom":0,"alpha":1},
                             "nodeParent":689,
                             "label":"Board",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":691,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"y":125,"x":0,"width":720,"skin":"main/di.png","sizeGrid":"146,0,0,0","height":755},
+                                    "props":{"y":33,"x":34,"width":672,"skin":"DX/huafushi/ben.png","sizeGrid":"755,0,80,0","height":847},
                                     "nodeParent":691,
                                     "label":"Image",
+                                    "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
@@ -109,6 +129,21 @@
                                     "$HIDDEN":false
                                 },
                                 {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"y":111,"x":65,"width":601,"skin":"DX/huafushi/xuanse-di.png","sizeGrid":"0,118,0,87","height":113},
+                                    "nodeParent":691,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":860,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,tuxing",
                                     "props":{"y":247,"x":251,"var":"tuxing","skin":"DX/huafushi/ren.png"},
@@ -122,9 +157,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor1",
-                                    "props":{"y":138,"x":436,"skin":"DX/huafushi/6.png","name":"imgColor1"},
+                                    "props":{"y":136,"x":475,"skin":"DX/huafushi/6.png","name":"imgColor1"},
                                     "nodeParent":691,
                                     "label":"imgColor1",
                                     "isOpen":true,
@@ -136,9 +172,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor2",
-                                    "props":{"y":138,"x":186,"skin":"DX/huafushi/3.png","name":"imgColor2"},
+                                    "props":{"y":138.5,"x":263,"skin":"DX/huafushi/3.png","name":"imgColor2"},
                                     "nodeParent":691,
                                     "label":"imgColor2",
                                     "isDirectory":false,
@@ -149,9 +186,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor3",
-                                    "props":{"y":138,"x":23,"skin":"DX/huafushi/1.png","name":"imgColor3"},
+                                    "props":{"y":137,"x":120,"skin":"DX/huafushi/1.png","name":"imgColor3"},
                                     "nodeParent":691,
                                     "label":"imgColor3",
                                     "isOpen":true,
@@ -163,9 +201,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor4",
-                                    "props":{"y":137,"x":356,"skin":"DX/huafushi/4.png","name":"imgColor4"},
+                                    "props":{"y":137,"x":404,"skin":"DX/huafushi/4.png","name":"imgColor4"},
                                     "nodeParent":691,
                                     "label":"imgColor4",
                                     "isDirectory":false,
@@ -176,9 +215,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor5",
-                                    "props":{"y":138,"x":103,"skin":"DX/huafushi/2.png","name":"imgColor5"},
+                                    "props":{"y":138,"x":192,"skin":"DX/huafushi/2.png","name":"imgColor5"},
                                     "nodeParent":691,
                                     "label":"imgColor5",
                                     "isDirectory":false,
@@ -189,9 +229,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor6",
-                                    "props":{"y":137,"x":273,"skin":"DX/huafushi/5.png","name":"imgColor6"},
+                                    "props":{"y":138,"x":334,"skin":"DX/huafushi/5.png","name":"imgColor6"},
                                     "nodeParent":691,
                                     "label":"imgColor6",
                                     "isDirectory":false,
@@ -202,9 +243,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgColor7",
-                                    "props":{"y":137,"x":523,"skin":"DX/huafushi/7.png","name":"imgColor7"},
+                                    "props":{"y":137,"x":547.5,"skin":"DX/huafushi/7.png","name":"imgColor7"},
                                     "nodeParent":691,
                                     "label":"imgColor7",
                                     "isDirectory":false,
@@ -215,9 +257,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgRubber",
-                                    "props":{"y":142.5,"x":613,"var":"imgRubber","skin":"DX/huafushi/xiangpi.png"},
+                                    "props":{"y":135,"x":616,"width":30,"var":"imgRubber","skin":"DX/huafushi/xiangpi.png","pivotY":17,"pivotX":-12,"height":97},
                                     "nodeParent":691,
                                     "label":"imgRubber",
                                     "isOpen":true,
@@ -229,9 +272,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,imgGou",
-                                    "props":{"y":155,"x":639,"var":"imgGou","skin":"DX/img_main_xuanzeyanse.png"},
+                                    "props":{"y":162,"x":637,"var":"imgGou","skin":"DX/img_main_xuanzeyanse.png"},
                                     "nodeParent":691,
                                     "label":"imgGou",
                                     "isDirectory":false,
@@ -242,6 +286,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Box",
                                     "searchKey":"Box,DrawBox",
                                     "props":{"y":224,"x":2,"width":717,"var":"DrawBox","height":649},
@@ -255,9 +300,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "searchKey":"Button,btnClear",
-                                    "props":{"y":59,"x":14,"var":"btnClear","stateNum":"1","skin":"DX/shuaxing.png"},
+                                    "props":{"y":247,"x":73,"var":"btnClear","stateNum":"1","skin":"DX/shuaxing.png"},
                                     "nodeParent":691,
                                     "label":"btnClear",
                                     "isDirectory":false,
@@ -268,9 +314,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Button",
                                     "searchKey":"Button,btnNext",
-                                    "props":{"y":64.5,"x":608.5,"width":223,"var":"btnNext","stateNum":"1","skin":"RankList/di.png","scaleY":0.5,"scaleX":0.5,"labelSize":40,"labelFont":"Microsoft YaHei","labelBold":true,"label":"确定","height":108},
+                                    "props":{"y":-28,"x":611.5,"width":223,"var":"btnNext","stateNum":"1","skin":"RankList/di.png","scaleY":0.5,"scaleX":0.5,"labelSize":40,"labelFont":"Microsoft YaHei","labelBold":true,"label":"确定","height":108},
                                     "nodeParent":691,
                                     "label":"btnNext",
                                     "isOpen":true,
@@ -282,9 +329,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,Colorfen,Colorfen",
-                                    "props":{"y":138,"x":23,"var":"Colorfen","skin":"DX/huafushi/1.png","name":"Colorfen"},
+                                    "props":{"y":137,"x":120,"var":"Colorfen","skin":"DX/huafushi/1.png","name":"Colorfen"},
                                     "nodeParent":691,
                                     "label":"Colorfen",
                                     "isOpen":false,
@@ -308,9 +356,10 @@
                                         }]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,Colorlan,Colorlan",
-                                    "props":{"y":137,"x":356,"var":"Colorlan","skin":"DX/huafushi/4.png","name":"Colorlan"},
+                                    "props":{"y":137,"x":404,"var":"Colorlan","skin":"DX/huafushi/4.png","name":"Colorlan"},
                                     "nodeParent":691,
                                     "label":"Colorlan",
                                     "isOpen":true,
@@ -320,6 +369,7 @@
                                     "compId":854,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"y":39,"x":24,"skin":"DX/shipin.png"},
@@ -336,6 +386,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":68,"x":55,"skin":"DX/huafushi/biaoti.png"},
@@ -349,22 +400,10 @@
                                 ]
                         },
                         {
-                            "type":"Image",
-                            "searchKey":"Image,tishiaw",
-                            "props":{"y":263,"x":1,"var":"tishiaw","skin":"DX/huafushi/tishi.png"},
-                            "nodeParent":689,
-                            "label":"tishiaw",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":796,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,BackBtn,BackBtn",
-                            "props":{"y":46,"x":46,"visible":false,"var":"BackBtn","skin":"main/anniu_xia.png","rotation":90,"name":"BackBtn","anchorY":0.5,"anchorX":0.5},
+                            "props":{"y":60,"x":51,"visible":false,"var":"BackBtn","skin":"common/fanhui.png","rotation":0,"name":"BackBtn","anchorY":0.5,"anchorX":0.5},
                             "nodeParent":689,
                             "label":"BackBtn",
                             "isDirectory":false,
@@ -392,13 +431,12 @@
             "compId":856,
             "child":[
                 {
-                    "x":30,
                     "type":"Box",
                     "searchKey":"Box,GetBox,GetBox",
                     "props":{"y":0,"x":0,"width":720,"visible":true,"var":"GetBox","name":"GetBox","height":1280,"centerY":0,"centerX":0},
                     "nodeParent":856,
                     "label":"GetBox",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
